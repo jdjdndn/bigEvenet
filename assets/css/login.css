@@ -10,7 +10,7 @@ html,body{
   height: 60px;
   background: url(/assets/images/logo.png) no-repeat;
 }
-.login-box{
+.loginBox{
   width: 400px;
   height: 310px;
   position: absolute;
