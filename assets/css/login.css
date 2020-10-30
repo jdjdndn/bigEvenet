@@ -25,3 +25,13 @@ html,body{
   background: url(/assets/images/login_title.png) no-repeat center;
 
 }
+form{
+  padding:30px
+}
+.links{
+  display: flex;
+  justify-content: flex-end;
+}
+.links a{
+  font-size: 12px;
+}
