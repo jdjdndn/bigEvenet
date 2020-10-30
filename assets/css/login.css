@@ -26,7 +26,7 @@ html,body{
 
 }
 form{
-  padding:30px
+  padding:0 30px;
 }
 /* a链接去注册 */
 .links{
