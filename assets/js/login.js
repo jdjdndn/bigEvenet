@@ -8,7 +8,8 @@ $(function () {
     $(".reg-box").hide()
   })
 
-  let baseUrl = 'http://ajax.frontend.itheima.net'
+  // let baseUrl = 'http://ajax.frontend.itheima.net'
+  let baseUrl=''
   let form = layui.form
   let layer = layui.layer
   form.verify({
