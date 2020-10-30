@@ -28,10 +28,23 @@ html,body{
 form{
   padding:30px
 }
+/* a链接去注册 */
 .links{
   display: flex;
   justify-content: flex-end;
 }
 .links a{
   font-size: 12px;
+}
+.layui-form-item{
+  position: relative;
+}
+/* 字体图标 */
+.layui-icon{
+position: absolute;
+left: 10px;
+top: 10px;
+}
+.layui-input{
+  padding-left: 32px;
 }
