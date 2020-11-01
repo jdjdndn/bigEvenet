@@ -11,23 +11,26 @@
   <div class="layui-card">
     <div class="layui-card-header">修改用户信息</div>
     <div class="layui-card-body">
-      <form class="layui-form" action="">
+      <form class="layui-form" lay-filter='formData'>
+        <div class="layui-form-item">
+          <input type="hidden" name="id">
+        </div>
         <div class="layui-form-item">
           <label class="layui-form-label">登录名称</label>
           <div class="layui-input-block">
-            <input type="text" name="title" required readonly  lay-verify="required" placeholder="请输入登录名称" autocomplete="off" class="layui-input" value='chengyu'>
+            <input type="text" name="username" required readonly  lay-verify="required" placeholder="请输入登录名称" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-form-item">
           <label class="layui-form-label">用户昵称</label>
           <div class="layui-input-block">
-            <input type="text" name="title" required  lay-verify="required|nickname" placeholder="请输入用户昵称" autocomplete="off" class="layui-input">
+            <input type="text" name="nickname" required  lay-verify="required|nickname" placeholder="请输入用户昵称" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-form-item">
           <label class="layui-form-label">用户邮箱</label>
           <div class="layui-input-block">
-            <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户邮箱" autocomplete="off" class="layui-input">
+            <input type="text" name="email" required  lay-verify="required" placeholder="请输入用户邮箱" autocomplete="off" class="layui-input">
           </div>
         </div>
         <div class="layui-form-item">
@@ -41,6 +44,7 @@
   </div>
   <script src="/assets/lib/layui/layui.all.js"></script>
   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="/assets/js/baseAPI.js"></script>
   <script src="/assets/js/user/user_info.js"></script>
 </body>
 </html>
