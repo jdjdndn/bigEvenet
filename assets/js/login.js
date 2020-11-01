@@ -9,7 +9,7 @@ $(function () {
   })
 
   // let baseUrl = 'http://ajax.frontend.itheima.net'
-  let baseUrl=''
+  let baseUrl = ''
   let form = layui.form
   let layer = layui.layer
   form.verify({
@@ -21,10 +21,10 @@ $(function () {
       if (pwd !== value) return '两次密码不一致'
     }
   })
-// 注册
+  // 注册
   $('.reg-box form').on('submit', function (e) {
     e.preventDefault()
-    let data=$('.reg-box form').serialize()
+    let data = $('.reg-box form').serialize()
     $.post(baseUrl + '/api/reguser', data, function (res) {
       console.log(res);
       if (res.status !== 0) return layer.msg(res.message)
@@ -32,16 +32,19 @@ $(function () {
       $("#toLogin").click()
     })
   })
-// 登录  程余123456
+  // 登录  程余123456
   $('.login-box form').on('submit', function (e) {
     e.preventDefault()
-    let data=$('.login-box form').serialize()
+    let data = $('.login-box form').serialize()
     $.post(baseUrl + '/api/login', data, function (res) {
       console.log(res);
       if (res.status !== 0) return layer.msg(res.message)
       layer.msg('登录成功')
       localStorage.setItem('token', res.token)
-      location.href='/index.html'
+      location.href = '/index.html'
     })
   })
+  if (window.top !== window) {
+    window.top.location.href = location.href
+  }
 })
