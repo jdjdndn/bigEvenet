@@ -15,3 +15,30 @@ iframe{
 .layui-body{
 overflow: hidden;
 }
+.left_img{
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+/* 清除layUI动画样式 */
+.layui-side-scroll{
+  transition: none;
+}
+.moren{
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #009688;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/* 用户自己设置的头像 */
+.layui-nav-img{
+width: 40px;
+height: 40px;
+}

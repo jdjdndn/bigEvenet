@@ -21,8 +21,11 @@
         <li class="layui-nav-item">
           <a href="javascript:;">
             <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-            靓仔
+            <!-- 默认头像  -->
+            <span class="moren">A</span>
+            <span>靓仔</span>
           </a>
+
           <dl class="layui-nav-child">
             <dd><a href="">基本资料</a></dd>
             <dd><a href="">更换头像</a></dd>
@@ -35,9 +38,17 @@
 
     <div class="layui-side layui-bg-black">
       <div class="layui-side-scroll">
+        <!-- 用户默认头像 -->
+        <div class='left_img'>
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          <!-- 默认头像 -->
+          <span class="moren">A</span>
+          <span>欢迎 靓仔</span>
+        </div>
         <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
         <ul class="layui-nav layui-nav-tree " lay-shrink=all>
-          <li class="layui-nav-item"><a href="/home/dashboard.html" target='fm'><span class="iconfont icon-home"></span>首页</a></li>
+          <li class="layui-nav-item layui-this"><a href="/home/dashboard.html" target='fm'><span
+                class="iconfont icon-home"></span>首页</a></li>
           <li class="layui-nav-item">
             <a class="" href="javascript:;"><span class="iconfont icon-16"></span>文章管理</a>
             <dl class="layui-nav-child">
@@ -60,7 +71,7 @@
 
     <div class="layui-body">
       <!-- 内容主体区域 -->
-    
+
       <iframe src="/home/dashboard.html" name='fm' frameborder="0"></iframe>
     </div>
 
