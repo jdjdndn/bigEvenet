@@ -36,6 +36,7 @@ overflow: hidden;
   background-color: #009688;
   border-radius: 50%;
   margin-right: 10px;
+  user-select: none;
 }
 /* 用户自己设置的头像 */
 .layui-nav-img{
