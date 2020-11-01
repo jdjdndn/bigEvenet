@@ -3,18 +3,32 @@ $(function () {
 
   form.verify({
     nickname: function (value) {
-      if (value.length <= 6) return '昵称不能少于6位'
+      if (value.length > 6) return '昵称不能多于6位'
     }
   })
 
-  getUserInfo()
+  getUser()
   //重置默认信息
   $("#resetBtn").on('click', function (e) {
     e.preventDefault()
-    getUserInfo()
+    getUser()
   })
 
-  function getUserInfo() {
+  //发起请求修改表单信息
+  $('.layui-form').on('submit', function (e) {
+    e.preventDefault()
+    $.ajax({
+      method: "POST",
+      url: "/my/userinfo",
+      data: $(this).serialize(),
+      success: function (res) {
+        getUser()
+        window.parent.getUserInfo()
+      }
+    })
+  })
+
+  function getUser() {
     $.ajax({
       method: 'GET',
       url: "/my/userinfo",
