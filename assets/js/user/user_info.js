@@ -8,6 +8,11 @@ $(function () {
   })
 
   getUserInfo()
+  //重置默认信息
+  $("#resetBtn").on('click', function (e) {
+    e.preventDefault()
+    getUserInfo()
+  })
 
   function getUserInfo() {
     $.ajax({
@@ -16,7 +21,7 @@ $(function () {
       success: function (res) {
         // console.log(res);
         //表单对应属性lay-filter='formData'  
-        form.val('formData',res.data)
+        form.val('formData', res.data)
       }
     })
   }
