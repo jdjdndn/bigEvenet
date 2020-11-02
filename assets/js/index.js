@@ -29,6 +29,7 @@ $(function () {
         renderUser(res.data)
       }
     })
+    return window.getUserInfo=getUserInfo
   }
 
   function renderUser(user) {

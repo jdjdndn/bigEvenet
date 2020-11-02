@@ -22,6 +22,8 @@ $(function () {
       url: "/my/userinfo",
       data: $(this).serialize(),
       success: function (res) {
+        
+        // if(res.status!==200)
         getUser()
         window.parent.getUserInfo()
       }
